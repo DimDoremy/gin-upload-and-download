@@ -1,0 +1,26 @@
+POST http://47.104.253.11:8080/download
+Content-Type: application/json
+
+{
+  "name": "1602729641-.gif",
+  "unix": 1602729641
+}
+
+###
+POST http://localhost:23344/api/download
+Content-Type: application/json
+
+{
+"name": "1602837377317188000Ac.pptx",
+"unix": 1602837377317188000
+}
+
+###
+
+POST http://localhost:23344/api/upload
+Content-Type: multipart/form-data
+
+Content-Disposition: form-data; name="files"; filename="main.go"
+Content-Type: text/plain
+
+###
