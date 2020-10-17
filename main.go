@@ -35,6 +35,9 @@ func main() {
 		api.GET("/", func(c *gin.Context) {
 			c.HTML(http.StatusOK, "index.html", gin.H{})
 		})
+
+		api.GET("/send", routers.MessageSendApi)
+		api.GET("/receive", routers.MessageReceiveApi)
 	}
 
 	srv := &http.Server{
