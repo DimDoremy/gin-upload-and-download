@@ -23,7 +23,6 @@ func UploadApi(c *gin.Context) {
 	if err != nil {
 		c.String(http.StatusInternalServerError, "上传出错")
 	}
-
 	unix := time.Now().UnixNano()
 	dst := strconv.FormatInt(unix, 10) + file.Filename[0:2] + Ext(file.Filename)
 	err = c.SaveUploadedFile(file, dir+"/"+dst)
